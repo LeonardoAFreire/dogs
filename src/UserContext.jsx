@@ -1,4 +1,5 @@
-import React, { createContext, useCallback, useEffect, useState } from 'react';
+/* eslint-disable react/prop-types */
+import { createContext, useCallback, useEffect, useState } from 'react';
 import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from './api';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,7 +18,6 @@ export function UserStorage({ children }) {
     setLoading(false);
     setLogin(false);
     window.localStorage.removeItem('token');
-    navigate('/login');
   }, []);
 
   async function getUser(token) {
@@ -76,7 +76,7 @@ export function UserStorage({ children }) {
     }
 
     autoLogin();
-  }, []);
+  }, [userLogout]);
 
   return (
     <UserContext.Provider
