@@ -77,6 +77,10 @@ a {
   animation: animeLeft 0.3s forwards;
 }
 
+.mainContainer {
+  margin-top: 4rem;
+}
+
 @keyframes animeLeft {
   to {
     opacity: 1;
