@@ -10,7 +10,10 @@ function FeedModal({ photo, setModalPhoto }) {
   const { data, error, loading, request } = useFetch();
 
   useEffect(() => {
-    const { url, options } = PHOTO_GET(photo);
+    const { url, options } = PHOTO_GET(photo.id);
+
+    console.log(url, options);
+
     request(url, options);
   }, [photo]);
 

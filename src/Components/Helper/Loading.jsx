@@ -14,7 +14,7 @@ function Loading() {
     return () => {
       clearInterval(interval);
     };
-  }, [setStep]);
+  }, []);
 
   function displayStep(i) {
     return {
